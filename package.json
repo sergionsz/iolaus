@@ -23,7 +23,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-push": "npm test"
+      "pre-push": "CI=true npm test"
     }
   }
 }
