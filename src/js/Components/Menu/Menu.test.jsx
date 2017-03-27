@@ -3,7 +3,7 @@ import Menu from './Menu';
 import { shallow } from 'enzyme';
 
 describe('Menu', () => {
-  const elements = [
+  const items = [
     {
       id: 'workout',
       name: 'Workout',
@@ -17,13 +17,13 @@ describe('Menu', () => {
   ];
 
   it('Renders a menu', () => {
-    const menu = shallow(<Menu elements={ elements } />);
-    expect(menu.find('.menu__element')).toHaveLength(2);
+    const menu = shallow(<Menu items={ items } />);
+    expect(menu.find('.menu__item')).toHaveLength(2);
   });
 
-  it('Adds a special class to the current menu element', () => {
-    const menu = shallow(<Menu elements={ elements } current='/config' />);
-    expect(menu.find('.menu__element--current')).toHaveLength(1);
-    expect(menu.find('.menu__element--current').children().text()).toBe('Configuration');
+  it('Adds a special class to the current menu item', () => {
+    const menu = shallow(<Menu items={ items } current='/config' />);
+    expect(menu.find('.menu__item--current')).toHaveLength(1);
+    expect(menu.find('.menu__item--current').children().text()).toBe('Configuration');
   });
 });
