@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "enzyme": "^2.8.0",
+    "ghooks": "^2.0.0",
     "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.8.5"
   },
@@ -19,5 +20,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "config": {
+    "ghooks": {
+      "pre-push": "npm test"
+    }
   }
 }
