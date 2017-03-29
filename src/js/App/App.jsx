@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className='app orange darken-4'>
+      <div className='app'>
         <h1 className='white-text'>Iolaus</h1>
         <Menu />
       </div>

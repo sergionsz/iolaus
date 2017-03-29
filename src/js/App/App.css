@@ -1,3 +1,12 @@
+@import "../../css/main.css";
+
+.app {
+  height: calc(100vh - 70px);
+  /* Prevents collapsed margins */
+  overflow: scroll;
+  padding: 15px;
+}
+
 .menu {
   position: fixed;
   bottom: 0;
